@@ -1,6 +1,6 @@
 <?php
 
-$data = array('MerchantID' => 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx', 'Amount' => 100, 'CallbackURL' => 'http://www.YourSite.com/','Mobile' => $Mobile,  'Email' => $Email, 'Description' => 'خرید تست');
+$data = array('MerchantID' => 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx', 'Amount' => 100, 'CallbackURL' => 'http://www.YourSite.com/','Mobile' => '09123456789'; // Optional,  'Email' => 'UserEmail@Mail.Com'; // Optional, 'Description' => 'خرید تست');
 $jsonData = json_encode($data);
 $ch = curl_init('https://www.zarinpal.com/pg/rest/WebGate/PaymentRequest.json');
 curl_setopt($ch, CURLOPT_USERAGENT, 'ZarinPal Rest Api v1');
