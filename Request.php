@@ -13,9 +13,9 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, array(
 ));
 
 $result = curl_exec($ch);
-$err = curl_error($curl);
+$err = curl_error($ch);
 $result = json_decode($result, true);
-curl_close($curl);
+curl_close($ch);
 
 if ($err) {
     echo "cURL Error #:" . $err;
