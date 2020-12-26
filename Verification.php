@@ -20,9 +20,7 @@ if ($err) {
     echo "cURL Error #:" . $err;
 } else {
     if ($result['data']['code'] == 100) {
-        echo '<p>' .
-            $result['data']['ref_id'] . '<br>' ;
-        echo '</p>';
+        echo 'Transation success. RefID:' . $result['data']['ref_id'];
     } else {
         echo'code: ' . $result['errors']['code'];
         echo'message: ' .  $result['errors']['message'];
