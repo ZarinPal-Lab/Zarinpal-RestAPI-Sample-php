@@ -14,6 +14,7 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, array(
 ));
 
 $result = curl_exec($ch);
+$err = curl_error($ch);
 curl_close($ch);
 $result = json_decode($result, true);
 if ($err) {
@@ -22,8 +23,8 @@ if ($err) {
     if ($result['data']['code'] == 100) {
         echo 'Transation success. RefID:' . $result['data']['ref_id'];
     } else {
-        echo'code: ' . $result['errors']['code'];
-        echo'message: ' .  $result['errors']['message'];
+        echo 'code: ' . $result['errors']['code'];
+        echo 'message: ' . $result['errors']['message'];
     }
 }
-?>
+
